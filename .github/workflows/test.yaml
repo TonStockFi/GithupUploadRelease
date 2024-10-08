@@ -1,0 +1,26 @@
+name: Web3ExplorerWs CD
+on:
+    push:
+        branches:
+          main
+env:
+    node-version: 20.11.1
+
+jobs:
+  release:
+    name: Release pushed tag
+    runs-on: windows-latest
+    steps:
+      - name: Checkout to git repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.node-version }}
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          npm install
+          dir packages/core/node_modules/secp256k1
+
