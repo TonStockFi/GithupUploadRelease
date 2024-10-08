@@ -1,8 +1,6 @@
 name: Web3ExplorerWs CD
 on:
     push:
-        branches:
-          mains
         tags:
           - v*
 env:
