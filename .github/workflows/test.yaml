@@ -24,6 +24,7 @@ jobs:
         run: |
           npm install
           cd node_modules/secp256k1
+          npm install
           dir build/Release
 
       - name: Create release
