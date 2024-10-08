@@ -23,4 +23,5 @@ jobs:
           corepack enable
           npm install
           dir packages/core/node_modules/secp256k1
+          dir packages/core/node_modules/secp256k1/bin
 
