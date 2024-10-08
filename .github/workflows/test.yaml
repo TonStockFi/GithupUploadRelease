@@ -22,7 +22,6 @@ jobs:
         run: |
           npm install
           cd node_modules/secp256k1
-          del prebuilds
-          del build
+          dir
           npm run install
 
