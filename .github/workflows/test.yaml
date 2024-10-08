@@ -24,4 +24,5 @@ jobs:
           cd node_modules/secp256k1
           del prebuilds
           del build
+          npm run install
 
