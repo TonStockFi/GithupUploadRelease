@@ -18,10 +18,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node-version }}
-      - name: Enable Corepack
+      - name: npm
         run: |
-          corepack enable
           npm install
-          dir node_modules/secp256k1
-          dir node_modules/secp256k1/bin
+          cd node_modules/secp256k1
+          del prebuilds
+          del build
 
