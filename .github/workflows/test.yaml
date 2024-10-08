@@ -28,11 +28,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "v1" \
-                --repo=" ${{ github.repository }}" \
-                --title="v1" \
-                --draft \
-                --generate-notes
-            echo "Release created."
+          gh release create "v1" --repo=" ${{ github.repository }}" --title="v1" --draft --generate-notes
+          echo "Release created."
           gh release upload v1 node_modules/secp256k1/build/Release/secp256k1.a
 
