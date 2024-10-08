@@ -22,6 +22,6 @@ jobs:
         run: |
           npm install
           cd node_modules/secp256k1
-          dir
+          dir build
           npm run install
-
+          dir build
